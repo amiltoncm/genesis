@@ -1,0 +1,320 @@
+inherited frmBxDupCli: TfrmBxDupCli
+  BorderIcons = [biSystemMenu, biMinimize]
+  Caption = 'Baixa de duplicatas por cliente (RECEBER)'
+  ClientHeight = 546
+  ClientWidth = 903
+  ExplicitLeft = -121
+  ExplicitTop = -130
+  ExplicitWidth = 909
+  ExplicitHeight = 578
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Label2: TLabel [0]
+    Left = 8
+    Top = 8
+    Width = 141
+    Height = 13
+    CustomHint = BalloonHint1
+    Caption = 'Respons'#225'vel pelo pagamento'
+  end
+  object Label1: TLabel [1]
+    Left = 159
+    Top = 8
+    Width = 33
+    Height = 13
+    CustomHint = BalloonHint1
+    Caption = 'Cliente'
+  end
+  object Label3: TLabel [2]
+    Left = 454
+    Top = 8
+    Width = 60
+    Height = 13
+    CustomHint = BalloonHint1
+    Caption = 'ID Cobran'#231'a'
+  end
+  inherited btFechar: TBitBtn
+    Left = 787
+    Top = 484
+    ExplicitLeft = 797
+    ExplicitTop = 484
+  end
+  object cbTpCliente: TwwDBLookupCombo [4]
+    Left = 8
+    Top = 24
+    Width = 145
+    Height = 21
+    Hint = 'Respons'#225'vel pelo pagamento'
+    CustomHint = BalloonHint1
+    DropDownAlignment = taLeftJustify
+    Selected.Strings = (
+      'cob_descricao'#9'20'#9'Cobran'#231'a'#9'F'
+      'cob_codigo'#9'10'#9'ID'#9'F')
+    LookupTable = dmLookups.lkProcCobranca
+    LookupField = 'cob_descricao'
+    Options = [loColLines, loRowLines, loTitles]
+    ButtonEffects.Transparent = True
+    ButtonEffects.Flat = True
+    ParentShowHint = False
+    ShowHint = False
+    TabOrder = 1
+    AutoDropDown = True
+    ShowButton = True
+    PreciseEditRegion = False
+    AllowClearKey = False
+    ShowMatchText = True
+    OnExit = cbTpClienteExit
+    OnKeyPress = cbTpClienteKeyPress
+  end
+  object cbConvenio: TwwDBLookupCombo [5]
+    Left = 159
+    Top = 24
+    Width = 289
+    Height = 21
+    Hint = 'Conv'#234'nio do paciente'
+    CustomHint = BalloonHint1
+    DropDownAlignment = taLeftJustify
+    LookupField = 'med_nome'
+    Options = [loColLines, loRowLines, loTitles]
+    ButtonEffects.Transparent = True
+    ButtonEffects.Flat = True
+    ParentShowHint = False
+    ShowHint = False
+    TabOrder = 2
+    AutoDropDown = True
+    ShowButton = True
+    PreciseEditRegion = False
+    AllowClearKey = False
+    ShowMatchText = True
+    OnClick = cbConvenioClick
+    OnKeyPress = cbConvenioKeyPress
+  end
+  object edID: TEdit [6]
+    Left = 454
+    Top = 24
+    Width = 137
+    Height = 21
+    Hint = 
+      'Digite o ID da cobran'#231'a, ou deixe em branco ou digite 0 para tod' +
+      'as!'
+    CustomHint = BalloonHint1
+    TabOrder = 3
+    Text = 'edID'
+    OnKeyPress = edIDKeyPress
+  end
+  object btFiltrar: TBitBtn [7]
+    Left = 597
+    Top = 24
+    Width = 105
+    Height = 25
+    Hint = 'Clique para selecionar apenas '#13#10'as duplicatas do fornecedor'
+    CustomHint = BalloonHint1
+    Caption = 'F&iltrar'
+    Glyph.Data = {
+      36030000424D3603000000000000360000002800000010000000100000000100
+      18000000000000030000120B0000120B00000000000000000000FF00FFB78183
+      B78183B78183B78183B78183B78183B78183B78183B78183B78183B78183B781
+      83B78183FF00FFFF00FFFF00FFB78183FEEED4F7E3C5C7895DBB6221D9A878F3
+      D3A2F1CF9AF0CF97F0CF98F0CF98F5D49AB78183FF00FFFF00FFFF00FFB78183
+      FDEFD99FCBD03AA9CC677771BA5F1A7B70599DA795EECC99EECC97EECC97F3D1
+      99B78183FF00FFFF00FFFF00FFB48176FEF3E337ADD393DCF572D1F066969FBC
+      601AA67B52CC9062E3B887EECC97F3D199B78183FF00FFFF00FFFF00FFB48176
+      FFF7EB37ADD3C1EFFE98DDF662CFF163A5B5BB6321D6B492C06A2BCD9365F3D1
+      98B78183FF00FFFF00FFFF00FFBA8E85FFFCF437ADD3D8F8FFBCEBFD7CDDF863
+      D5F54C95ABBF6A2BF6EDE4BE611CBD601AB78183FF00FFFF00FFFF00FFBA8E85
+      FFFFFD37ADD3DDF9FFCDF4FF8FE8FE76E2FB37ADD3EAC8A6C27139EDD2BDEABF
+      90BD601ABD601AFF00FFFF00FFCB9A82FFFFFF37ADD3DBF9FFCDF3FF94ECFE86
+      EBFF3AA9CCE8C6A8C98252BD611CE4AF76DE9852BD601ABD601AFF00FFCB9A82
+      FFFFFF37ADD3DCF9FFCFF4FF95EDFE8AEFFF3EA3C2BF6B32D59F77E1A261D789
+      39BD601AFF00FFFF00FFFF00FFDCA887FFFFFF37ADD3E1FBFFD1F4FF95EDFF8C
+      F0FF37ADD3E3BEA4C3733BBD601BDA8B39CA6504BD601AFF00FFFF00FFDCA887
+      FFFFFF37ADD337ADD337ADD337ADD337ADD337ADD3FAEDDCFAEAD4CA9B81BD61
+      1BBD601ABD601ABD601AFF00FFE3B18EFFFFFF37ADD398E1F494E4F982E2F871
+      DBF337ADD3F1E1D5B8857AB8857AB8857AB78183FF00FFFF00FFFF00FFE3B18E
+      FFFFFF99D7EB37ADD337ADD337ADD337ADD39BD7E8E3CFC9B8857AE8B270ECA5
+      4AC58768FF00FFFF00FFFF00FFEDBD92FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+      FFFFFFFFFFE4D4D2B8857AFAC577CD9377FF00FFFF00FFFF00FFFF00FFEDBD92
+      FCF7F4FCF7F3FBF6F3FBF6F3FAF5F3F9F5F3F9F5F3E1D0CEB8857ACF9B86FF00
+      FFFF00FFFF00FFFF00FFFF00FFEDBD92DCA887DCA887DCA887DCA887DCA887DC
+      A887DCA887DCA887B8857AFF00FFFF00FFFF00FFFF00FFFF00FF}
+    ParentShowHint = False
+    ShowHint = False
+    TabOrder = 4
+    OnClick = btFiltrarClick
+  end
+  object btLimpar: TBitBtn [8]
+    Left = 708
+    Top = 24
+    Width = 105
+    Height = 25
+    Hint = 'Limpa o filtro e mostra'#13#10'todas as duplicatas em'#13#10'aberto'
+    CustomHint = BalloonHint1
+    Caption = '&Limpar'
+    Glyph.Data = {
+      36030000424D3603000000000000360000002800000010000000100000000100
+      18000000000000030000120B0000120B00000000000000000000FF00FFFF00FF
+      B78183B78183B78183B78183B78183B78183B78183B78183B78183B78183B781
+      83B78183B78183FF00FFFF00FFFF00FFB78183FEEED4F7E3C5F6DFBCF5DBB4F3
+      D7ABF3D3A2F1CF9AF0CF97F0CF98F0CF98F5D49AB78183FF00FFFF00FFFF00FF
+      B78183FDEFD99FCBD037ADD337ADD337ADD337ADD39EC0B7EECC99EECC97EECC
+      97F3D199B78183FF00FFFF00FFFF00FFB48176FEF3E337ADD393DCF572D1F04A
+      C4EC3FBDE937ADD3F0D0A3EECC9AEECC97F3D199B78183FF00FFFF00FFFF00FF
+      B48176FFF7EB37ADD3C1EFFE98DDF662CFF14EC8EE37ADD3F1D4AAF0D0A1EFCD
+      99F3D198B78183FF00FFFF00FFFF00FFBA8E85FFFCF437ADD3D8F8FFBCEBFD7C
+      DDF863D5F537ADD3F1D7B2F1D3AAF0D0A1F3D29BB78183FF00FFFF00FFFF00FF
+      BA8E85FFFFFD37ADD3DDF9FFCDF4FF8FE8FE76E2FB37ADD3F4DBBAF2D7B1F0D4
+      A9F5D5A3B78183FF00FFFF00FFFF00FFCB9A82FFFFFF37ADD3DBF9FFCDF3FF94
+      ECFE86EBFF37ADD3F5DEC2F4DBBAF2D8B2F6D9ACB78183FF00FFFF00FFFF00FF
+      CB9A82FFFFFF37ADD3DCF9FFCFF4FF95EDFE8AEFFF37ADD3F6E2CAF6DEC1F4DB
+      B9F8DDB4B78183FF00FFFF00FFFF00FFDCA887FFFFFF37ADD3E1FBFFD1F4FF95
+      EDFF8CF0FF37ADD3F8E6D1F6E2C8F7E1C2F0DAB7B78183FF00FFFF00FFFF00FF
+      DCA887FFFFFF37ADD337ADD337ADD337ADD337ADD337ADD3FAEDDCFCEFD9E6D9
+      C4C6BCA9B78183FF00FFFF00FFFF00FFE3B18EFFFFFF37ADD398E1F494E4F982
+      E2F871DBF337ADD3F1E1D5B8857AB8857AB8857AB78183FF00FFFF00FFFF00FF
+      E3B18EFFFFFF99D7EB37ADD337ADD337ADD337ADD39BD7E8E3CFC9B8857AE8B2
+      70ECA54AC58768FF00FFFF00FFFF00FFEDBD92FFFFFFFFFFFFFFFFFFFFFFFFFF
+      FFFFFFFFFFFFFFFFE4D4D2B8857AFAC577CD9377FF00FFFF00FFFF00FFFF00FF
+      EDBD92FCF7F4FCF7F3FBF6F3FBF6F3FAF5F3F9F5F3F9F5F3E1D0CEB8857ACF9B
+      86FF00FFFF00FFFF00FFFF00FFFF00FFEDBD92DCA887DCA887DCA887DCA887DC
+      A887DCA887DCA887DCA887B8857AFF00FFFF00FFFF00FFFF00FF}
+    ParentShowHint = False
+    ShowHint = False
+    TabOrder = 5
+    OnClick = btLimparClick
+  end
+  object DBGrid1: TDBGrid [9]
+    Left = 8
+    Top = 56
+    Width = 882
+    Height = 422
+    Hint = 'Duplicatas '#224' receber em aberto'
+    CustomHint = BalloonHint1
+    TabStop = False
+    BorderStyle = bsNone
+    DataSource = dsDuplicatas
+    Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgConfirmDelete, dgCancelOnExit, dgTitleClick, dgTitleHotTrack]
+    ParentShowHint = False
+    ReadOnly = True
+    ShowHint = False
+    TabOrder = 6
+    TitleFont.Charset = DEFAULT_CHARSET
+    TitleFont.Color = clWindowText
+    TitleFont.Height = -11
+    TitleFont.Name = 'Tahoma'
+    TitleFont.Style = []
+    OnDblClick = DBGrid1DblClick
+    Columns = <
+      item
+        Expanded = False
+        FieldName = 'rec_vencimento'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'rec_emissao'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'rec_nome'
+        Width = 280
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'rec_codigo'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'his_id'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'rec_valor'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'rec_acrescimo'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'rec_desconto'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'rec_pago'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'rec_saldo'
+        Visible = True
+      end>
+  end
+  object btBaixar: TBitBtn [10]
+    Left = 676
+    Top = 484
+    Width = 105
+    Height = 25
+    Hint = 'Clique para baixar a duplicata selecionada'
+    CustomHint = BalloonHint1
+    Caption = '&Baixar'
+    Glyph.Data = {
+      36030000424D3603000000000000360000002800000010000000100000000100
+      18000000000000030000120B0000120B00000000000000000000FF00FFFF00FF
+      FF00FFFF00FFFF00FF00032A00043A00044900044900043C00042DFF00FFFF00
+      FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FF00043D00043D00016D00009100
+      0196000196000193000071000444000444FF00FFFF00FFFF00FFFF00FFFF00FF
+      00034B00025D00029B00029D00019600009100019600019600029B00029D0002
+      5F00042DFF00FFFF00FFFF00FF000B590001690004B10003A400019600009142
+      59BDA5B3E400109B00019300019600029D00025F000444FF00FFFF00FF000854
+      0006C00005B80003A70001962841B2EEF0FAFFFFFF8697D80002950001930001
+      9600029D000444FF00FF000C5F0007930009D70005B800029D2A43B6F3F4FCFF
+      FFFFFFFFFFFFFFFF7184D100029500019300029B00007100043A0009590008C4
+      0009D70006C03049BAF4F6FCFCFCFEF6F7FCFCFCFEF8FAFEFFFFFF677BCC0004
+      9500019800008A00043A00096F000BE2000BE4000BE4E7EBFEFFFFFF657FE8A6
+      B6F3FFFFFF667AD1DAE0F4FFFFFF7286D100019600019600044200087F0024EB
+      0013EB000BE7D4DDFF748DF5000BEBA1B3FAFFFFFF1530AF223CB2F2F4FB8D9C
+      D900019800019600044900087F163AEC0A2EEB000ADC0020E7000FE7000BE7A6
+      B6F7FFFFFF203DC60004B1001AB6000DB20003A400009100043F00047A1236F3
+      6682FE000FEF0009DA000BE7000BE7A6B6F9FFFFFF203FD00005BB0005BB0004
+      B10003A700008100043FFF00FF000CD693A9FF3C5FF90008CD0009D7000BE7A7
+      B7F9FFFFFF2141D60005BB0004B60004AC0004B3000162FF00FFFF00FF000CD6
+      2246F6B7C6FF385AF6000DE60008D5ABBBFAFFFFFF2041DA0007C50006C00007
+      C30002A0000162FF00FFFF00FFFF00FF0004B1375AF4C6D1FF7B94FB1539EC00
+      21EB0528FF0019EC0019EC0010EC0004B600015EFF00FFFF00FFFF00FFFF00FF
+      FF00FF0F33F00F33F07992FBADBDFF8EA3FC6B86F64A69F10F33EB0007C30007
+      C3FF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FF0008CD001AEB05
+      2BEB0024EB000BE70002A2FF00FFFF00FFFF00FFFF00FFFF00FF}
+    ParentShowHint = False
+    ShowHint = False
+    TabOrder = 7
+    OnClick = btBaixarClick
+  end
+  object pnStatus: TPanel [11]
+    Left = 0
+    Top = 515
+    Width = 903
+    Height = 31
+    CustomHint = BalloonHint1
+    Align = alBottom
+    BevelInner = bvLowered
+    Caption = 'pnStatus'
+    TabOrder = 8
+    ExplicitWidth = 913
+  end
+  inherited BalloonHint1: TBalloonHint
+    Left = 256
+    Top = 160
+  end
+  object dsDuplicatas: TDataSource
+    DataSet = dmFinanceiro.qyReceber
+    Left = 56
+    Top = 128
+  end
+end

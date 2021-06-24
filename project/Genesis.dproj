@@ -1,0 +1,1044 @@
+﻿	<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+		<PropertyGroup>
+			<ProjectGuid>{FC7B0670-1114-4BE8-9952-84BA77FFD91F}</ProjectGuid>
+			<ProjectVersion>13.4</ProjectVersion>
+			<FrameworkType>VCL</FrameworkType>
+			<MainSource>Genesis.dpr</MainSource>
+			<Base>True</Base>
+			<Config Condition="'$(Config)'==''">Debug</Config>
+			<Platform Condition="'$(Platform)'==''">Win32</Platform>
+			<TargetedPlatforms>1</TargetedPlatforms>
+			<AppType>Application</AppType>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Config)'=='Base' or '$(Base)'!=''">
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="('$(Platform)'=='Win64' and '$(Base)'=='true') or '$(Base_Win64)'!=''">
+			<Base_Win64>true</Base_Win64>
+			<CfgParent>Base</CfgParent>
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="('$(Platform)'=='Win32' and '$(Base)'=='true') or '$(Base_Win32)'!=''">
+			<Base_Win32>true</Base_Win32>
+			<CfgParent>Base</CfgParent>
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Config)'=='Debug' or '$(Cfg_1)'!=''">
+			<Cfg_1>true</Cfg_1>
+			<CfgParent>Base</CfgParent>
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="('$(Platform)'=='Win32' and '$(Cfg_1)'=='true') or '$(Cfg_1_Win32)'!=''">
+			<Cfg_1_Win32>true</Cfg_1_Win32>
+			<CfgParent>Cfg_1</CfgParent>
+			<Cfg_1>true</Cfg_1>
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Config)'=='Release' or '$(Cfg_2)'!=''">
+			<Cfg_2>true</Cfg_2>
+			<CfgParent>Base</CfgParent>
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="('$(Platform)'=='Win32' and '$(Cfg_2)'=='true') or '$(Cfg_2_Win32)'!=''">
+			<Cfg_2_Win32>true</Cfg_2_Win32>
+			<CfgParent>Cfg_2</CfgParent>
+			<Cfg_2>true</Cfg_2>
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!=''">
+			<DCC_Namespace>System;Xml;Data;Datasnap;Web;Soap;Vcl;Vcl.Imaging;Vcl.Touch;Vcl.Samples;Vcl.Shell;$(DCC_Namespace)</DCC_Namespace>
+			<Icon_MainIcon>$(BDS)\bin\delphi_PROJECTICON.ico</Icon_MainIcon>
+			<DCC_UsePackage>fmx;IndySystem;DBXInterBaseDriver;DataSnapClient;DataSnapCommon;DataSnapServer;DataSnapProviderClient;DbxCommonDriver;dbxcds;DBXOracleDriver;dsnap;IndyCore;fmxase;inetdbxpress;IPIndyImpl;bindcompfmx;rtl;dbrtl;DbxClientDriver;bindcomp;inetdb;xmlrtl;ibxpress;IndyProtocols;DBXMySQLDriver;soaprtl;bindengine;DBXInformixDriver;DBXFirebirdDriver;inet;fmxobj;DBXSybaseASADriver;fmxdae;dbexpress;DataSnapIndy10ServerTransport;$(DCC_UsePackage)</DCC_UsePackage>
+			<DCC_DcuOutput>.\$(Platform)\$(Config)</DCC_DcuOutput>
+			<DCC_ExeOutput>.\$(Platform)\$(Config)</DCC_ExeOutput>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base_Win64)'!=''">
+			<DCC_UsePackage>DBXSybaseASEDriver;vclimg;vcldb;vcldsnap;DBXDb2Driver;vcl;DBXMSSQLDriver;webdsnap;adortl;Tee;DBXOdbcDriver;vclactnband;TeeUI;bindcompvcl;vclie;vcltouch;websnap;VclSmp;dsnapcon;vclx;$(DCC_UsePackage)</DCC_UsePackage>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base_Win32)'!=''">
+			<DCC_UsePackage>JvGlobus;JvMM;dclRBADO1416;ipstudiowindataset;JvManagedThreads;dclRBIBE1416;JvDlgs;JvCrypt;TeeDB;vclib;inetdbbde;rbRAP1416;rbRCL1416;JvNet;JvDotNetCtrls;DBXSybaseASEDriver;vclimg;fmi;JvXPCtrls;vcldb;vcldsnap;rbUSER1416;DBXDb2Driver;Intraweb_120_160;dclRBBDE1416;JvCore;vclribbon;rbCIDE1416;vcl;rbDIDE1416;rbTCUI1416;CloudService;DBXMSSQLDriver;FmxTeeUI;dclRBE1416;ipstudiowinwordxp;JvAppFrm;JvDB;JvRuntimeDesign;webdsnap;rbRIDE1416;rbDAD1416;JclDeveloperTools;JvDocking;adortl;JvWizards;rbUSERDesign1416;JvHMI;JvBands;vcldbx;dclRBDBE1416;JvPluginSystem;Tee;JclContainers;DBXOdbcDriver;rbDBDE1416;JvCmp;JvSystem;svnui;rbTC1416;JvControls;JvTimeFramework;intrawebdb_120_160;SqlDir160;vclactnband;FMXTee;TeeUI;ipstudiowin;bindcompvcl;JvStdCtrls;JvCustom;Jcl;vclie;JvJans;rbIDE1416;rbADO1416;JvPageComps;JvPrintPreview;vcltouch;rbBDE1416;Classes;websnap;VclSmp;rbDB1416;rbDBE1416;DataSnapConnectors;ipstudiowinclient;dsnapcon;JclVcl;JvPascalInterpreter;rbIBE1416;vclx;svn;bdertl;JvBDE;$(DCC_UsePackage)</DCC_UsePackage>
+			<VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
+			<DCC_Namespace>Winapi;System.Win;Data.Win;Datasnap.Win;Web.Win;Soap.Win;Xml.Win;Bde;$(DCC_Namespace)</DCC_Namespace>
+			<VerInfo_Locale>1033</VerInfo_Locale>
+			<Manifest_File>$(BDS)\bin\default_app.manifest</Manifest_File>
+			<VerInfo_Keys>CompanyName=;FileDescription=;FileVersion=1.0.0.0;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProductName=;ProductVersion=1.0.0.0;Comments=</VerInfo_Keys>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Cfg_1)'!=''">
+			<DCC_Define>DEBUG;$(DCC_Define)</DCC_Define>
+			<DCC_Optimize>false</DCC_Optimize>
+			<DCC_GenerateStackFrames>true</DCC_GenerateStackFrames>
+			<DCC_DebugInfoInExe>true</DCC_DebugInfoInExe>
+			<DCC_RemoteDebug>true</DCC_RemoteDebug>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Cfg_1_Win32)'!=''">
+			<VerInfo_Keys>CompanyName=;FileDescription=;FileVersion=2.0.0.0;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProductName=;ProductVersion=2.0.0.0;Comments=</VerInfo_Keys>
+			<VerInfo_MajorVer>2</VerInfo_MajorVer>
+			<DCC_ExeOutput>D:\Documentos\OneDrive\Genesis\bin\debug\</DCC_ExeOutput>
+			<VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
+			<VerInfo_Locale>1046</VerInfo_Locale>
+			<DCC_DcuOutput>C:\Genesis\bin\debug\</DCC_DcuOutput>
+			<DCC_RemoteDebug>false</DCC_RemoteDebug>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Cfg_2)'!=''">
+			<DCC_LocalDebugSymbols>false</DCC_LocalDebugSymbols>
+			<DCC_Define>RELEASE;$(DCC_Define)</DCC_Define>
+			<DCC_SymbolReferenceInfo>0</DCC_SymbolReferenceInfo>
+			<DCC_DebugInformation>false</DCC_DebugInformation>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Cfg_2_Win32)'!=''">
+			<VerInfo_Build>69</VerInfo_Build>
+			<VerInfo_Keys>CompanyName=Next Sistemas de Informação;FileDescription=Genesis.exe;FileVersion=2.0.0.69;InternalName=Genesis;LegalCopyright=Amilton da Cruz Machado;LegalTrademarks=Amilton da Cruz Machado;OriginalFilename=Genesis.exe;ProductName=Genesis;ProductVersion=2.0.0.69;Comments=Genesis Project</VerInfo_Keys>
+			<VerInfo_MajorVer>2</VerInfo_MajorVer>
+			<Icon_MainIcon>Genesis_Icon.ico</Icon_MainIcon>
+			<DCC_ExeOutput>D:\Documentos\OneDrive\Genesis\bin\release\</DCC_ExeOutput>
+			<VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
+			<VerInfo_Locale>1046</VerInfo_Locale>
+			<DCC_DcuOutput>C:\Genesis\source__genesis\dcu\release\</DCC_DcuOutput>
+		</PropertyGroup>
+		<ItemGroup>
+			<DelphiCompile Include="$(MainSource)">
+				<MainSource>MainSource</MainSource>
+			</DelphiCompile>
+			<DCCReference Include="..\view\estrutura\uPrincipal.pas">
+				<Form>frmPrincipal</Form>
+			</DCCReference>
+			<DCCReference Include="..\templates\uTmpForm.pas">
+				<Form>frmTmpForm</Form>
+			</DCCReference>
+			<DCCReference Include="..\var\uVarGlobal.pas"/>
+			<DCCReference Include="..\funcoes\uFuncoesSistema.pas"/>
+			<DCCReference Include="..\funcoes\uFuncoesLogs.pas"/>
+			<DCCReference Include="..\funcoes\uFuncoesSeguranca.pas"/>
+			<DCCReference Include="..\funcoes\uFuncoesDB.pas"/>
+			<DCCReference Include="..\funcoes\uFuncoesFormatacao.pas"/>
+			<DCCReference Include="..\funcoes\uFuncoesDatas.pas"/>
+			<DCCReference Include="..\funcoes\UFuncoesTISS.pas"/>
+			<DCCReference Include="..\funcoes\uFuncoesValidacao.pas"/>
+			<DCCReference Include="..\funcoes\uFuncoesVersao.pas"/>
+			<DCCReference Include="..\funcoes\uFuncoesWeb.pas"/>
+			<DCCReference Include="..\funcoes\uFuncoesMail.pas"/>
+			<DCCReference Include="..\view\mensagens\uErConexao.pas">
+				<Form>frmErConexao</Form>
+			</DCCReference>
+			<DCCReference Include="..\dados\dataTmpConexao.pas">
+				<Form>dmTmpConexao</Form>
+				<DesignClass>TDataModule</DesignClass>
+			</DCCReference>
+			<DCCReference Include="..\dados\dataCadastros.pas">
+				<Form>dmCadastros</Form>
+				<DesignClass>TDataModule</DesignClass>
+			</DCCReference>
+			<DCCReference Include="..\dados\dataConfig.pas">
+				<Form>dmConfig</Form>
+				<DesignClass>TDataModule</DesignClass>
+			</DCCReference>
+			<DCCReference Include="..\dados\dataConsultas.pas">
+				<Form>dmConsultas</Form>
+				<DesignClass>TDataModule</DesignClass>
+			</DCCReference>
+			<DCCReference Include="..\dados\dataGestao.pas">
+				<Form>dmGestao</Form>
+				<DesignClass>TDataModule</DesignClass>
+			</DCCReference>
+			<DCCReference Include="..\dados\dataLookups.pas">
+				<Form>dmLookups</Form>
+				<DesignClass>TDataModule</DesignClass>
+			</DCCReference>
+			<DCCReference Include="..\view\estrutura\uSenha.pas">
+				<Form>frmSenha</Form>
+			</DCCReference>
+			<DCCReference Include="..\dao\uDaoUsuarios.pas"/>
+			<DCCReference Include="..\templates\uTmpModulos.pas">
+				<Form>frmTmpModulos</Form>
+			</DCCReference>
+			<DCCReference Include="..\view\mensagens\uSobre.pas">
+				<Form>frmSobre</Form>
+			</DCCReference>
+			<DCCReference Include="..\view\uteis\uSQL.pas">
+				<Form>frmSQL</Form>
+			</DCCReference>
+			<DCCReference Include="..\templates\uTmpFormNormal.pas">
+				<Form>frmTmpFormNormal</Form>
+			</DCCReference>
+			<DCCReference Include="..\templates\uTmpFormMDI.pas">
+				<Form>frmTmpFormMDI</Form>
+			</DCCReference>
+			<DCCReference Include="..\templates\uTmpCadastro.pas">
+				<Form>frmTmpCadastro</Form>
+			</DCCReference>
+			<DCCReference Include="..\dao\uDaoExames.pas"/>
+			<DCCReference Include="..\dao\uDaoExamesLogs.pas"/>
+			<DCCReference Include="..\dao\uDaoExamesCob.pas"/>
+			<DCCReference Include="..\dados\dataExames.pas">
+				<Form>dmExames</Form>
+				<DesignClass>TDataModule</DesignClass>
+			</DCCReference>
+			<DCCReference Include="..\view\estrutura\uRequisicao.pas">
+				<Form>frmRequisicao</Form>
+			</DCCReference>
+			<DCCReference Include="..\dao\uDaoPacientes.pas"/>
+			<DCCReference Include="..\dao\uDaoExamesEnvMail.pas"/>
+			<DCCReference Include="..\dao\uDaoExamesTp.pas"/>
+			<DCCReference Include="..\dados\dataFinanceiro.pas">
+				<Form>dmFinanceiro</Form>
+				<DesignClass>TDataModule</DesignClass>
+			</DCCReference>
+			<DCCReference Include="..\view\estrutura\uValorPago.pas">
+				<Form>frmValorPago</Form>
+			</DCCReference>
+			<DCCReference Include="..\templates\uTmpRelFormNormal.pas">
+				<Form>frmTmpRelFormNormal</Form>
+			</DCCReference>
+			<DCCReference Include="..\view\relatórios\uRelRecibo.pas">
+				<Form>frmRelRecibo</Form>
+			</DCCReference>
+			<DCCReference Include="..\dao\uDaoTissPend.pas"/>
+			<DCCReference Include="..\view\mensagens\uPendencias.pas">
+				<Form>frmPendencias</Form>
+			</DCCReference>
+			<DCCReference Include="..\dao\uDaoConvenios.pas"/>
+			<DCCReference Include="..\dao\uDaoMedicos.pas"/>
+			<DCCReference Include="..\dao\uDaoExamesProced.pas"/>
+			<DCCReference Include="..\dao\uDaoConvProc.pas"/>
+			<DCCReference Include="..\dao\uDaoProcedimentos.pas"/>
+			<DCCReference Include="..\view\estrutura\uExamesCito.pas">
+				<Form>frmExamesCito</Form>
+			</DCCReference>
+			<DCCReference Include="..\dao\uDaoExamesCito.pas"/>
+			<DCCReference Include="..\view\estrutura\uExamesHist.pas">
+				<Form>frmExamesHist</Form>
+			</DCCReference>
+			<DCCReference Include="..\dao\uDaoExamesHist.pas"/>
+			<DCCReference Include="..\dao\uDaoLaudosPadrao.pas"/>
+			<DCCReference Include="..\view\estrutura\uInsereModeloMacro.pas">
+				<Form>frmInsereModeloMacro</Form>
+			</DCCReference>
+			<DCCReference Include="..\dao\uDaoExamesHistMacro.pas"/>
+			<DCCReference Include="..\view\estrutura\uGerenFiles.pas">
+				<Form>frmGerenFiles</Form>
+			</DCCReference>
+			<DCCReference Include="..\dao\uDaoExamesFiles.pas"/>
+			<DCCReference Include="..\view\relatórios\uRelCitoEspecial.pas">
+				<Form>frmRelCitoEspecial</Form>
+			</DCCReference>
+			<DCCReference Include="..\view\relatórios\uRelCitoEtapaI.pas">
+				<Form>frmRelCitoEtapaI</Form>
+			</DCCReference>
+			<DCCReference Include="..\view\relatórios\uRelHistoEtapaIMac.pas">
+				<Form>frmRelHistoEtapaIMac</Form>
+			</DCCReference>
+			<DCCReference Include="..\view\relatórios\uRelHistoEtapaI.pas">
+				<Form>frmRelHistoEtapaI</Form>
+			</DCCReference>
+			<DCCReference Include="..\templates\uTmpConsultasNormal.pas">
+				<Form>frmTmpConsultasNormal</Form>
+			</DCCReference>
+			<DCCReference Include="..\view\consultas\uConsSelExame.pas">
+				<Form>frmConsSelExame</Form>
+			</DCCReference>
+			<DCCReference Include="..\view\cadastros\uCadPacRequisicao.pas">
+				<Form>frmCadPacRequisicao</Form>
+			</DCCReference>
+			<DCCReference Include="..\view\cadastros\uCadMedRequisicao.pas">
+				<Form>frmCadMedRequisicao</Form>
+			</DCCReference>
+			<DCCReference Include="..\view\estrutura\uVisualizaNomes.pas">
+				<Form>frmVisualizaNomes</Form>
+			</DCCReference>
+			<DCCReference Include="..\view\estrutura\uExamesAnt.pas">
+				<Form>frmExamesAnt</Form>
+			</DCCReference>
+			<DCCReference Include="..\view\estrutura\uDetExame.pas">
+				<Form>frmDetExame</Form>
+			</DCCReference>
+			<DCCReference Include="..\dao\uDaoEmpresa.pas"/>
+			<DCCReference Include="..\dao\uDaoConsEnvMail.pas"/>
+			<DCCReference Include="..\dao\uDaoImagens.pas"/>
+			<DCCReference Include="..\view\relatórios\uRelLaudoFinal.pas">
+				<Form>frmRelLaudoFinal</Form>
+			</DCCReference>
+			<DCCReference Include="..\dao\uDaoEmail.pas"/>
+			<DCCReference Include="..\dao\uDaoExamesCitoNotas.pas"/>
+			<DCCReference Include="..\dao\uDaoExamesResp.pas"/>
+			<DCCReference Include="..\dao\uDaoExamesLaudo.pas"/>
+			<DCCReference Include="..\view\estrutura\uExpedicao.pas">
+				<Form>frmExpedicao</Form>
+			</DCCReference>
+			<DCCReference Include="..\dao\uDaoExamesCitoMacro.pas"/>
+			<DCCReference Include="..\dao\uDaoExamesDoencas.pas"/>
+			<DCCReference Include="..\dao\uDaoExamesFinal.pas"/>
+			<DCCReference Include="..\dao\uDaoRespAss.pas"/>
+			<DCCReference Include="..\dao\uDaoConfig.pas"/>
+			<DCCReference Include="..\view\relatórios\uRelHistologia.pas">
+				<Form>frmRelHistologia</Form>
+			</DCCReference>
+			<DCCReference Include="..\dao\uDaoExamesHistMicro.pas"/>
+			<DCCReference Include="..\dao\uDaoResponsaveis.pas"/>
+			<DCCReference Include="..\view\estrutura\uSelImprimeCit.pas">
+				<Form>frmSelImprimeCit</Form>
+			</DCCReference>
+			<DCCReference Include="..\funcoes\uFuncoesExames.pas"/>
+			<DCCReference Include="..\view\consultas\uSelHistologia.pas">
+				<Form>frmSelHistologia</Form>
+			</DCCReference>
+			<DCCReference Include="..\view\uteis\uCfgMail.pas">
+				<Form>frmCfgMail</Form>
+			</DCCReference>
+			<DCCReference Include="..\templates\uTmpProcura.pas">
+				<Form>frmTmpProcura</Form>
+			</DCCReference>
+			<DCCReference Include="..\view\procuras\uProcUsuarios.pas">
+				<Form>frmProcUsuarios</Form>
+			</DCCReference>
+			<DCCReference Include="..\dao\uDaoUsuariosMail.pas"/>
+			<DCCReference Include="..\view\cadastros\uCadUsuariosMail.pas">
+				<Form>frmCadUsuariosMail</Form>
+			</DCCReference>
+			<DCCReference Include="..\view\uteis\uCorreio.pas">
+				<Form>frmCorreio</Form>
+			</DCCReference>
+			<DCCReference Include="..\dao\uDaoExamesRespAd.pas"/>
+			<DCCReference Include="..\view\consultas\uSelCIT.pas">
+				<Form>frmSelCIT</Form>
+			</DCCReference>
+			<DCCReference Include="..\view\uteis\uParametros.pas">
+				<Form>frmParametros</Form>
+			</DCCReference>
+			<DCCReference Include="..\view\movimentacoes\uTransfCito.pas">
+				<Form>frmTransfCito</Form>
+			</DCCReference>
+			<DCCReference Include="..\dados\dataCid10.pas">
+				<Form>dmCid10</Form>
+				<DesignClass>TDataModule</DesignClass>
+			</DCCReference>
+			<DCCReference Include="..\view\consultas\uSelCITTable.pas">
+				<Form>frmSelCITTable</Form>
+			</DCCReference>
+			<DCCReference Include="..\dao\uDaoExamesObs.pas"/>
+			<DCCReference Include="..\funcoes\uFuncRelExameLaudo.pas"/>
+			<DCCReference Include="..\view\estrutura\uPreencheCito.pas">
+				<Form>frmPreencheCito</Form>
+			</DCCReference>
+			<DCCReference Include="..\view\estrutura\uNotasCito.pas">
+				<Form>frmNotasCito</Form>
+			</DCCReference>
+			<DCCReference Include="..\view\estrutura\uObsExame.pas">
+				<Form>frmObsExame</Form>
+			</DCCReference>
+			<DCCReference Include="..\view\estrutura\uAltExame.pas">
+				<Form>frmAltExame</Form>
+			</DCCReference>
+			<DCCReference Include="..\view\cadastros\uCadPacientes.pas">
+				<Form>frmCadPacientes</Form>
+			</DCCReference>
+			<DCCReference Include="..\view\cadastros\uObsPacientes.pas">
+				<Form>frmObsPacientes</Form>
+			</DCCReference>
+			<DCCReference Include="..\view\procuras\uProcPacientes.pas">
+				<Form>frmProcPacientes</Form>
+			</DCCReference>
+			<DCCReference Include="..\view\estrutura\uVisImagem.pas">
+				<Form>frmVisImagem</Form>
+			</DCCReference>
+			<DCCReference Include="..\view\cadastros\uCadMedAd.pas">
+				<Form>frmCadMedAd</Form>
+			</DCCReference>
+			<DCCReference Include="..\view\estrutura\uEditMatGuia.pas">
+				<Form>frmEditMatGuia</Form>
+			</DCCReference>
+			<DCCReference Include="..\view\estrutura\uEditaDataNasc.pas">
+				<Form>frmEditaDataNasc</Form>
+			</DCCReference>
+			<DCCReference Include="..\view\cadastros\uRespAdd.pas">
+				<Form>frmRespAdd</Form>
+			</DCCReference>
+			<DCCReference Include="..\view\movimentacoes\uExameLaudo.pas">
+				<Form>frmExameLaudo</Form>
+			</DCCReference>
+			<DCCReference Include="..\view\consultas\uSelExameLaudo.pas">
+				<Form>frmSelExameLaudo</Form>
+			</DCCReference>
+			<DCCReference Include="..\view\estrutura\uMacroCito.pas">
+				<Form>frmMacroCito</Form>
+			</DCCReference>
+			<DCCReference Include="..\view\cadastros\uCadResponsaveis.pas">
+				<Form>frmCadResponsaveis</Form>
+			</DCCReference>
+			<DCCReference Include="..\view\procuras\uProcResponsaveis.pas">
+				<Form>frmProcResponsaveis</Form>
+			</DCCReference>
+			<DCCReference Include="..\view\estrutura\uCorte.pas">
+				<Form>frmCorte</Form>
+			</DCCReference>
+			<DCCReference Include="..\view\consultas\uSelHistCorte.pas">
+				<Form>frmSelHistCorte</Form>
+			</DCCReference>
+			<DCCReference Include="..\dao\uDaoExamesTop.pas"/>
+			<DCCReference Include="..\dao\uDaoExamesBlocos.pas"/>
+			<DCCReference Include="..\view\estrutura\uObsExames.pas">
+				<Form>frmObsExames</Form>
+			</DCCReference>
+			<DCCReference Include="..\view\consultas\uConsDivExames.pas">
+				<Form>frmConsDivExames</Form>
+			</DCCReference>
+			<DCCReference Include="..\dao\uDaoLaudosModMacro.pas"/>
+			<DCCReference Include="..\view\estrutura\uMacroscopia.pas">
+				<Form>frmMacroscopia</Form>
+			</DCCReference>
+			<DCCReference Include="..\classes\uClassExamesProced.pas"/>
+			<DCCReference Include="..\classes\uClassExamesBlocos.pas"/>
+			<DCCReference Include="..\view\estrutura\uObsEx.pas">
+				<Form>frmObsEx</Form>
+			</DCCReference>
+			<DCCReference Include="..\view\estrutura\uSelHISTTable.pas">
+				<Form>frmSelHISTTable</Form>
+			</DCCReference>
+			<DCCReference Include="..\classes\uClassConexao.pas"/>
+			<DCCReference Include="..\dados\dataTestSGDB.pas">
+				<Form>dmTestSGDB</Form>
+				<DesignClass>TDataModule</DesignClass>
+			</DCCReference>
+			<DCCReference Include="..\view\uteis\uCfgBase.pas">
+				<Form>frmCfgBase</Form>
+			</DCCReference>
+			<DCCReference Include="..\view\relatórios\uRelCorte.pas">
+				<Form>frmRelCorte</Form>
+			</DCCReference>
+			<DCCReference Include="..\dao\uDaoExamesTipo.pas"/>
+			<DCCReference Include="..\dao\uDaoTestes.pas"/>
+			<DCCReference Include="..\view\estrutura\uMicroscopia.pas">
+				<Form>frmMicroscopia</Form>
+			</DCCReference>
+			<DCCReference Include="..\view\estrutura\uRevisao.pas">
+				<Form>frmRevisao</Form>
+			</DCCReference>
+			<DCCReference Include="..\classes\uClassExamesTop.pas"/>
+			<DCCReference Include="..\classes\uClassExamesHistMicro.pas"/>
+			<DCCReference Include="..\view\estrutura\uDoenca.pas">
+				<Form>frmDoenca</Form>
+			</DCCReference>
+			<DCCReference Include="..\view\movimentacoes\uTransfMacro.pas">
+				<Form>frmTransfMacro</Form>
+			</DCCReference>
+			<DCCReference Include="..\dao\uDaoAcesso.pas"/>
+			<DCCReference Include="..\view\cadastros\uCadAcesso.pas">
+				<Form>frmCadAcesso</Form>
+			</DCCReference>
+			<DCCReference Include="..\view\cadastros\uCadBancos.pas">
+				<Form>frmCadBancos</Form>
+			</DCCReference>
+			<DCCReference Include="..\dao\uDaoBancos.pas"/>
+			<DCCReference Include="..\view\cadastros\uCadAgenda.pas">
+				<Form>frmCadAgenda</Form>
+			</DCCReference>
+			<DCCReference Include="..\dao\uDaoUf.pas"/>
+			<DCCReference Include="..\dao\uDaoFuncoes.pas"/>
+			<DCCReference Include="..\dao\uDaoMateriais.pas"/>
+			<DCCReference Include="..\dao\uDaoTopografias.pas"/>
+			<DCCReference Include="..\dao\uDaoExamesLocais.pas"/>
+			<DCCReference Include="..\dao\uDaoMovimentos.pas"/>
+			<DCCReference Include="..\dao\uDaoLaudosModHist.pas"/>
+			<DCCReference Include="..\view\cadastros\uCadLaudosMod.pas">
+				<Form>frmCadLaudosMod</Form>
+			</DCCReference>
+			<DCCReference Include="..\view\cadastros\uCadExamesTipoCito.pas">
+				<Form>frmCadExamesTipoCito</Form>
+			</DCCReference>
+			<DCCReference Include="..\dao\uDaoExamesTipoCito.pas"/>
+			<DCCReference Include="..\view\cadastros\uCadUf.pas">
+				<Form>frmCadUf</Form>
+			</DCCReference>
+			<DCCReference Include="..\view\cadastros\uCadFuncoes.pas">
+				<Form>frmCadFuncoes</Form>
+			</DCCReference>
+			<DCCReference Include="..\view\cadastros\uCadMateriais.pas">
+				<Form>frmCadMateriais</Form>
+			</DCCReference>
+			<DCCReference Include="..\view\cadastros\uCadLaudosModMacro.pas">
+				<Form>frmCadLaudosModMacro</Form>
+			</DCCReference>
+			<DCCReference Include="..\view\cadastros\uCadLaudosModHist.pas">
+				<Form>frmCadLaudosModHist</Form>
+			</DCCReference>
+			<DCCReference Include="..\view\cadastros\uCadExamesTipo.pas">
+				<Form>frmCadExamesTipo</Form>
+			</DCCReference>
+			<DCCReference Include="..\view\cadastros\uCadTopografias.pas">
+				<Form>frmCadTopografias</Form>
+			</DCCReference>
+			<DCCReference Include="..\view\cadastros\uCadExamesLocais.pas">
+				<Form>frmCadExamesLocais</Form>
+			</DCCReference>
+			<DCCReference Include="..\view\cadastros\uCadProcedimentos.pas">
+				<Form>frmCadProcedimentos</Form>
+			</DCCReference>
+			<DCCReference Include="..\view\cadastros\uCadMovimentos.pas">
+				<Form>frmCadMovimentos</Form>
+			</DCCReference>
+			<DCCReference Include="..\view\procuras\uProcMovimentos.pas">
+				<Form>frmProcMovimentos</Form>
+			</DCCReference>
+			<DCCReference Include="..\view\procuras\uProcProcedimentos.pas">
+				<Form>frmProcProcedimentos</Form>
+			</DCCReference>
+			<DCCReference Include="..\view\procuras\uProcExamesLocais.pas">
+				<Form>frmProcExamesLocais</Form>
+			</DCCReference>
+			<DCCReference Include="..\view\procuras\uProcTopografias.pas">
+				<Form>frmProcTopografias</Form>
+			</DCCReference>
+			<DCCReference Include="..\view\procuras\uProcLaudosModHist.pas">
+				<Form>frmProcLaudosModHist</Form>
+			</DCCReference>
+			<DCCReference Include="..\view\procuras\uProcLaudosModMacro.pas">
+				<Form>frmProcLaudosModMacro</Form>
+			</DCCReference>
+			<DCCReference Include="..\view\procuras\uProcMateriais.pas">
+				<Form>frmProcMateriais</Form>
+			</DCCReference>
+			<DCCReference Include="..\view\procuras\uProcFuncoes.pas">
+				<Form>frmProcFuncoes</Form>
+			</DCCReference>
+			<DCCReference Include="..\view\procuras\uProcUf.pas">
+				<Form>frmProcUf</Form>
+			</DCCReference>
+			<DCCReference Include="..\view\procuras\uProcExamesTipoCito.pas">
+				<Form>frmProcExamesTipoCito</Form>
+			</DCCReference>
+			<DCCReference Include="..\view\procuras\uProcLaudosMod.pas">
+				<Form>frmProcLaudosMod</Form>
+			</DCCReference>
+			<DCCReference Include="..\dao\uDaoLaudosMod.pas"/>
+			<DCCReference Include="..\view\procuras\uProcAcesso.pas">
+				<Form>frmProcAcesso</Form>
+			</DCCReference>
+			<DCCReference Include="..\view\procuras\uProcAgenda.pas">
+				<Form>frmProcAgenda</Form>
+			</DCCReference>
+			<DCCReference Include="..\view\procuras\uProcBancos.pas">
+				<Form>frmProcBancos</Form>
+			</DCCReference>
+			<DCCReference Include="..\dao\uDaoCid10capitulos.pas"/>
+			<DCCReference Include="..\dao\uDaoCid10categorias.pas"/>
+			<DCCReference Include="..\dao\uDaoCid10grupos.pas"/>
+			<DCCReference Include="..\dao\uDaoCid10subcategorias.pas"/>
+			<DCCReference Include="..\dao\uDaoCidades.pas"/>
+			<DCCReference Include="..\dao\uDaoContas.pas"/>
+			<DCCReference Include="..\dao\uDaoExamesTipoHist.pas"/>
+			<DCCReference Include="..\dao\uDaoFornecedores.pas"/>
+			<DCCReference Include="..\dao\uDaoFuncionarios.pas"/>
+			<DCCReference Include="..\view\cadastros\uCadCID10.pas">
+				<Form>frmCadCID10</Form>
+			</DCCReference>
+			<DCCReference Include="..\view\cadastros\uCadCidades.pas">
+				<Form>frmCadCidades</Form>
+			</DCCReference>
+			<DCCReference Include="..\view\cadastros\uCadContas.pas">
+				<Form>frmCadContas</Form>
+			</DCCReference>
+			<DCCReference Include="..\view\cadastros\uCadConvenios.pas">
+				<Form>frmCadConvenios</Form>
+			</DCCReference>
+			<DCCReference Include="..\view\cadastros\uCadFornecedores.pas">
+				<Form>frmCadFornecedores</Form>
+			</DCCReference>
+			<DCCReference Include="..\view\cadastros\uCadFuncionarios.pas">
+				<Form>frmCadFuncionarios</Form>
+			</DCCReference>
+			<DCCReference Include="..\view\cadastros\uCadExamesTipoHist.pas">
+				<Form>frmCadExamesTipoHist</Form>
+			</DCCReference>
+			<DCCReference Include="..\view\cadastros\uCadMedicos.pas">
+				<Form>frmCadMedicos</Form>
+			</DCCReference>
+			<DCCReference Include="..\view\procuras\uProcCidades.pas">
+				<Form>frmProcCidades</Form>
+			</DCCReference>
+			<DCCReference Include="..\view\procuras\uProcContas.pas">
+				<Form>frmProcContas</Form>
+			</DCCReference>
+			<DCCReference Include="..\view\procuras\uProcConvenios.pas">
+				<Form>frmProcConvenios</Form>
+			</DCCReference>
+			<DCCReference Include="..\view\procuras\uProcFornecedores.pas">
+				<Form>frmProcFornecedores</Form>
+			</DCCReference>
+			<DCCReference Include="..\view\procuras\uProcFuncionarios.pas">
+				<Form>frmProcFuncionarios</Form>
+			</DCCReference>
+			<DCCReference Include="..\view\procuras\uProcExamesTipoHist.pas">
+				<Form>frmProcExamesTipoHist</Form>
+			</DCCReference>
+			<DCCReference Include="..\view\procuras\uProcExamesTipo.pas">
+				<Form>frmProcExamesTipo</Form>
+			</DCCReference>
+			<DCCReference Include="..\view\procuras\uProcMedicos.pas">
+				<Form>frmProcMedicos</Form>
+			</DCCReference>
+			<DCCReference Include="..\view\cadastros\uTabPrecos.pas">
+				<Form>frmTabPrecos</Form>
+			</DCCReference>
+			<DCCReference Include="..\classes\uClassConvProc.pas"/>
+			<DCCReference Include="..\dao\uDaoRelatorios.pas"/>
+			<DCCReference Include="..\templates\uTmpRelFormNormalDefault.pas">
+				<Form>frmTmpRelFormNormalDefault</Form>
+			</DCCReference>
+			<DCCReference Include="..\view\relatórios\uRelExConv.pas">
+				<Form>frmRelExConv</Form>
+			</DCCReference>
+			<DCCReference Include="..\view\relatórios\uRelExMed.pas">
+				<Form>frmRelExMed</Form>
+			</DCCReference>
+			<DCCReference Include="..\view\relatórios\uRelExOri.pas">
+				<Form>frmRelExOri</Form>
+			</DCCReference>
+			<DCCReference Include="..\view\relatórios\uRelExPac.pas">
+				<Form>frmRelExPac</Form>
+			</DCCReference>
+			<DCCReference Include="..\view\relatórios\uRelListagem.pas">
+				<Form>frmRelListagem</Form>
+			</DCCReference>
+			<DCCReference Include="..\view\relatórios\uRelExProced.pas">
+				<Form>frmRelExProced</Form>
+			</DCCReference>
+			<DCCReference Include="..\view\relatórios\uRelCaixa.pas">
+				<Form>frmRelCaixa</Form>
+			</DCCReference>
+			<DCCReference Include="..\dao\uDaoCaixa.pas"/>
+			<DCCReference Include="..\view\relatórios\uRelCaixaAgrupado.pas">
+				<Form>frmRelCaixaAgrupado</Form>
+			</DCCReference>
+			<DCCReference Include="..\view\relatórios\uRelCaixaMov.pas">
+				<Form>frmRelCaixaMov</Form>
+			</DCCReference>
+			<DCCReference Include="..\view\relatórios\uRelCaixaAll.pas">
+				<Form>frmRelCaixaAll</Form>
+			</DCCReference>
+			<DCCReference Include="..\view\relatórios\uRelPagar.pas">
+				<Form>frmRelPagar</Form>
+			</DCCReference>
+			<DCCReference Include="..\dao\uDaoPagar.pas"/>
+			<DCCReference Include="..\view\relatórios\uRelPagas.pas">
+				<Form>frmRelPagas</Form>
+			</DCCReference>
+			<DCCReference Include="..\view\relatórios\uRelReceber.pas">
+				<Form>frmRelReceber</Form>
+			</DCCReference>
+			<DCCReference Include="..\dao\uDaoReceber.pas"/>
+			<DCCReference Include="..\view\relatórios\uRelRecebido.pas">
+				<Form>frmRelRecebido</Form>
+			</DCCReference>
+			<DCCReference Include="..\view\relatórios\uRelLotesTISS.pas">
+				<Form>frmRelLotesTISS</Form>
+			</DCCReference>
+			<DCCReference Include="..\view\relatórios\uRelExamesConvenios.pas">
+				<Form>frmRelExamesConvenios</Form>
+			</DCCReference>
+			<DCCReference Include="..\view\relatórios\uRelProcedXConv.pas">
+				<Form>frmRelProcedXConv</Form>
+			</DCCReference>
+			<DCCReference Include="..\view\relatórios\uRelEtiquetasAut.pas">
+				<Form>frmRelEtiquetasAut</Form>
+			</DCCReference>
+			<DCCReference Include="..\view\consultas\uConsStatus.pas">
+				<Form>frmConsStatus</Form>
+			</DCCReference>
+			<DCCReference Include="..\dao\uDaoConsultas.pas"/>
+			<DCCReference Include="..\view\uteis\uCalendario.pas">
+				<Form>frmCalendario</Form>
+			</DCCReference>
+			<DCCReference Include="..\view\movimentacoes\uMovEntCaixa.pas">
+				<Form>frmMovEntCaixa</Form>
+			</DCCReference>
+			<DCCReference Include="..\classes\uClassCaixa.pas"/>
+			<DCCReference Include="..\view\consultas\uExamesPend.pas">
+				<Form>frmExamesPend</Form>
+			</DCCReference>
+			<DCCReference Include="..\view\consultas\uExamesLog.pas">
+				<Form>frmExamesLog</Form>
+			</DCCReference>
+			<DCCReference Include="..\funcoes\uFuncIntegridade.pas"/>
+			<DCCReference Include="..\view\consultas\uIntegridade.pas">
+				<Form>frmIntegridade</Form>
+			</DCCReference>
+			<DCCReference Include="..\view\consultas\uSelDataIntegridade.pas">
+				<Form>frmSelDataIntegridade</Form>
+			</DCCReference>
+			<DCCReference Include="..\view\consultas\uConsCheques.pas">
+				<Form>frmConsCheques</Form>
+			</DCCReference>
+			<DCCReference Include="..\dao\uDaoCheques.pas"/>
+			<DCCReference Include="..\view\consultas\uConsQuantEx.pas">
+				<Form>frmConsQuantEx</Form>
+			</DCCReference>
+			<DCCReference Include="..\dao\uDaoConsQuantEx.pas"/>
+			<DCCReference Include="..\view\consultas\uConsPagar.pas">
+				<Form>frmConsPagar</Form>
+			</DCCReference>
+			<DCCReference Include="..\view\movimentacoes\uMovSaiCaixa.pas">
+				<Form>frmMovSaiCaixa</Form>
+			</DCCReference>
+			<DCCReference Include="..\view\uteis\uSplash.pas">
+				<Form>frmSplash</Form>
+			</DCCReference>
+			<DCCReference Include="..\view\consultas\uSelImuno.pas">
+				<Form>frmSelImuno</Form>
+			</DCCReference>
+			<DCCReference Include="..\view\estrutura\uInsereImuno.pas">
+				<Form>frmInsereImuno</Form>
+			</DCCReference>
+			<DCCReference Include="..\classes\uClassExamesImuno.pas"/>
+			<DCCReference Include="..\dados\dataTmpConexaoZeos.pas">
+				<Form>dmTmpConexaoZeos</Form>
+				<DesignClass>TDataModule</DesignClass>
+			</DCCReference>
+			<DCCReference Include="..\dados\dataFiles.pas">
+				<Form>dmFiles</Form>
+				<DesignClass>TDataModule</DesignClass>
+			</DCCReference>
+			<DCCReference Include="..\dao\uDaoExamesImunoZEOS.pas"/>
+			<DCCReference Include="..\dao\uDaoImagensZEOS.pas"/>
+			<DCCReference Include="..\dao\uDaoModulos.pas"/>
+			<DCCReference Include="..\view\movimentacoes\uMovTransfContas.pas">
+				<Form>frmMovTransfContas</Form>
+			</DCCReference>
+			<DCCReference Include="..\dados\dataImagens.pas">
+				<Form>dmImagens</Form>
+				<DesignClass>TDataModule</DesignClass>
+			</DCCReference>
+			<DCCReference Include="..\view\uteis\uVisLogs.pas">
+				<Form>frmVisLogs</Form>
+			</DCCReference>
+			<DCCReference Include="..\view\uteis\uModulos.pas">
+				<Form>frmModulos</Form>
+			</DCCReference>
+			<DCCReference Include="..\view\uteis\uVisualizaAgenda.pas">
+				<Form>frmVisualizaAgenda</Form>
+			</DCCReference>
+			<DCCReference Include="..\dao\uDaoAgenda.pas"/>
+			<DCCReference Include="..\dao\uDaoAgendaDia.pas"/>
+			<DCCReference Include="..\view\uteis\uAgendamento.pas">
+				<Form>frmAgendamento</Form>
+			</DCCReference>
+			<DCCReference Include="..\view\movimentacoes\uBxCheques.pas">
+				<Form>frmBxCheques</Form>
+			</DCCReference>
+			<DCCReference Include="..\view\movimentacoes\uLancCheque.pas">
+				<Form>frmLancCheque</Form>
+			</DCCReference>
+			<DCCReference Include="..\classes\uClassCheques.pas"/>
+			<DCCReference Include="..\templates\uTmpSenhaMaster.pas">
+				<Form>frmTmpSenhaMaster</Form>
+			</DCCReference>
+			<DCCReference Include="..\view\movimentacoes\uSenhaCheque.pas">
+				<Form>frmSenhaCheque</Form>
+			</DCCReference>
+			<DCCReference Include="..\view\movimentacoes\uDepCheque.pas">
+				<Form>frmDepCheque</Form>
+			</DCCReference>
+			<DCCReference Include="..\view\movimentacoes\uConfirmaBxChq.pas">
+				<Form>frmConfirmaBxChq</Form>
+			</DCCReference>
+			<DCCReference Include="..\view\movimentacoes\uLancPagar.pas">
+				<Form>frmLancPagar</Form>
+			</DCCReference>
+			<DCCReference Include="..\view\movimentacoes\uBxDupFor.pas">
+				<Form>frmBxDupFor</Form>
+			</DCCReference>
+			<DCCReference Include="..\view\movimentacoes\uConfBaixaDup.pas">
+				<Form>frmConfBaixaDup</Form>
+			</DCCReference>
+			<DCCReference Include="..\classes\uClassPagar.pas"/>
+			<DCCReference Include="..\view\movimentacoes\uSelChq.pas">
+				<Form>frmSelChq</Form>
+			</DCCReference>
+			<DCCReference Include="..\view\movimentacoes\uAltPagamento.pas">
+				<Form>frmAltPagamento</Form>
+			</DCCReference>
+			<DCCReference Include="..\view\movimentacoes\uConfAltPagamento.pas">
+				<Form>frmConfAltPagamento</Form>
+			</DCCReference>
+			<DCCReference Include="..\view\movimentacoes\uAltVlrPagar.pas">
+				<Form>frmAltVlrPagar</Form>
+			</DCCReference>
+			<DCCReference Include="..\funcoes\uFuncoesDBEsp.pas"/>
+			<DCCReference Include="..\view\relatórios\uRelPendTISS.pas">
+				<Form>frmRelPendTISS</Form>
+			</DCCReference>
+			<DCCReference Include="..\view\consultas\uConsPendTISS.pas">
+				<Form>frmConsPendTISS</Form>
+			</DCCReference>
+			<DCCReference Include="..\view\movimentacoes\uBxDupCli.pas">
+				<Form>frmBxDupCli</Form>
+			</DCCReference>
+			<DCCReference Include="..\view\movimentacoes\uConfBxDupCli.pas">
+				<Form>frmConfBxDupCli</Form>
+			</DCCReference>
+			<DCCReference Include="..\dao\uDaoHistRec.pas"/>
+			<DCCReference Include="..\view\movimentacoes\uAltReceber.pas">
+				<Form>frmAltReceber</Form>
+			</DCCReference>
+			<DCCReference Include="..\view\movimentacoes\uConfAltReceber.pas">
+				<Form>frmConfAltReceber</Form>
+			</DCCReference>
+			<DCCReference Include="..\view\movimentacoes\uSelConvenio.pas">
+				<Form>frmSelConvenio</Form>
+			</DCCReference>
+			<DCCReference Include="..\view\movimentacoes\uAltVlrProced.pas">
+				<Form>frmAltVlrProced</Form>
+			</DCCReference>
+			<DCCReference Include="..\view\movimentacoes\uGeraCobranca.pas">
+				<Form>frmGeraCobranca</Form>
+			</DCCReference>
+			<DCCReference Include="..\funcoes\uFuncoesCob.pas"/>
+			<DCCReference Include="..\view\movimentacoes\uConfCobranca.pas">
+				<Form>frmConfCobranca</Form>
+			</DCCReference>
+			<DCCReference Include="..\view\consultas\uConsReceber.pas">
+				<Form>frmConsReceber</Form>
+			</DCCReference>
+			<DCCReference Include="..\dao\uDaoRecTISS.pas"/>
+			<DCCReference Include="..\classes\uClassReceber.pas"/>
+			<DCCReference Include="..\view\consultas\uProcedimentosCob.pas">
+				<Form>frmProcedimentosCob</Form>
+			</DCCReference>
+			<DCCReference Include="..\classes\uClassHistRec.pas"/>
+			<DCCReference Include="..\classes\uClassRecTISS.pas"/>
+			<DCCReference Include="..\view\movimentacoes\uGeraCobMult.pas">
+				<Form>frmGeraCobMult</Form>
+			</DCCReference>
+			<DCCReference Include="..\dao\uDaoRecObs.pas"/>
+			<DCCReference Include="..\view\movimentacoes\uExportaCob.pas">
+				<Form>frmExportaCob</Form>
+			</DCCReference>
+			<DCCReference Include="..\dao\uDaoConsDivExames.pas"/>
+			<DCCReference Include="..\classes\uClassConsDivExames.pas"/>
+			<DCCReference Include="..\view\relatórios\uRelListaExames.pas">
+				<Form>frmRelListaExames</Form>
+			</DCCReference>
+			<DCCReference Include="..\dao\uDaoExamesTISS.pas"/>
+			<DCCReference Include="..\dao\uDaoExamesAut.pas"/>
+			<DCCReference Include="..\dao\uDaoExamesPend.pas"/>
+			<DCCReference Include="..\dados\dataExamesZEOS.pas">
+				<Form>dmExamesZEOS</Form>
+				<DesignClass>TDataModule</DesignClass>
+			</DCCReference>
+			<DCCReference Include="..\view\cadastros\uCadUsuarios.pas">
+				<Form>frmCadUsuarios</Form>
+			</DCCReference>
+			<DCCReference Include="..\dao\uDaoMatCid.pas"/>
+			<DCCReference Include="..\view\procuras\uProcCIDSubCat.pas">
+				<Form>frmProcCIDSubCat</Form>
+				<FormType>dfm</FormType>
+			</DCCReference>
+			<DCCReference Include="..\view\estrutura\uDoencaNew.pas">
+				<Form>frmDoencaNew</Form>
+				<FormType>dfm</FormType>
+			</DCCReference>
+			<DCCReference Include="..\view\consultas\uConsTopografiasEx.pas">
+				<Form>frmConsTopografiasEx</Form>
+				<FormType>dfm</FormType>
+			</DCCReference>
+			<DCCReference Include="..\funcoes\uFuncoesString.pas"/>
+			<DCCReference Include="..\view\relatórios\uRelTopografiasEx.pas">
+				<Form>frmRelTopografiasEx</Form>
+				<FormType>dfm</FormType>
+			</DCCReference>
+			<DCCReference Include="..\view\relatórios\uRelAuditoriaH.pas">
+				<Form>frmRelAuditoriaH</Form>
+				<FormType>dfm</FormType>
+			</DCCReference>
+			<DCCReference Include="..\view\cadastros\uCadLaudosPreMod.pas">
+				<Form>frmCadLaudosPreMod</Form>
+				<FormType>dfm</FormType>
+			</DCCReference>
+			<DCCReference Include="..\dao\uDaoLaudosPreMod.pas"/>
+			<DCCReference Include="..\view\procuras\uProcLaudosPreMod.pas">
+				<Form>frmProcLaudosPreMod</Form>
+			</DCCReference>
+			<DCCReference Include="..\view\relatórios\uRelExamesDoencas.pas">
+				<Form>frmRelExamesDoencas</Form>
+				<FormType>dfm</FormType>
+			</DCCReference>
+			<DCCReference Include="..\dao\uDaoVersao.pas"/>
+			<DCCReference Include="..\view\estrutura\uVersao.pas">
+				<Form>frmVersao</Form>
+				<FormType>dfm</FormType>
+			</DCCReference>
+			<DCCReference Include="..\dao\uDaoCitofrases.pas"/>
+			<DCCReference Include="..\view\cadastros\uCadcitofrases.pas">
+				<Form>frmCadcitofrases</Form>
+			</DCCReference>
+			<DCCReference Include="..\view\procuras\uProcCitofrases.pas">
+				<Form>frmProcCitofrases</Form>
+			</DCCReference>
+			<DCCReference Include="..\view\movimentacoes\uFraseCito.pas">
+				<Form>frmFraseCito</Form>
+				<FormType>dfm</FormType>
+			</DCCReference>
+			<DCCReference Include="..\classes\uClassExamesfrases.pas"/>
+			<DCCReference Include="..\dao\uDaoExamesFrases.pas"/>
+			<DCCReference Include="..\view\movimentacoes\uExameTISS.pas">
+				<Form>frmExameTISS</Form>
+				<FormType>dfm</FormType>
+			</DCCReference>
+			<DCCReference Include="..\classes\uClassExamescoleta.pas"/>
+			<DCCReference Include="..\dao\uDaoExamesColeta.pas"/>
+			<BuildConfiguration Include="Release">
+				<Key>Cfg_2</Key>
+				<CfgParent>Base</CfgParent>
+			</BuildConfiguration>
+			<BuildConfiguration Include="Base">
+				<Key>Base</Key>
+			</BuildConfiguration>
+			<BuildConfiguration Include="Debug">
+				<Key>Cfg_1</Key>
+				<CfgParent>Base</CfgParent>
+			</BuildConfiguration>
+		</ItemGroup>
+		<ProjectExtensions>
+			<Borland.Personality>Delphi.Personality.12</Borland.Personality>
+			<Borland.ProjectType/>
+			<BorlandProject>
+				<Delphi.Personality>
+					<VersionInfo>
+						<VersionInfo Name="IncludeVerInfo">False</VersionInfo>
+						<VersionInfo Name="AutoIncBuild">False</VersionInfo>
+						<VersionInfo Name="MajorVer">1</VersionInfo>
+						<VersionInfo Name="MinorVer">0</VersionInfo>
+						<VersionInfo Name="Release">0</VersionInfo>
+						<VersionInfo Name="Build">0</VersionInfo>
+						<VersionInfo Name="Debug">False</VersionInfo>
+						<VersionInfo Name="PreRelease">False</VersionInfo>
+						<VersionInfo Name="Special">False</VersionInfo>
+						<VersionInfo Name="Private">False</VersionInfo>
+						<VersionInfo Name="DLL">False</VersionInfo>
+						<VersionInfo Name="Locale">1046</VersionInfo>
+						<VersionInfo Name="CodePage">1252</VersionInfo>
+					</VersionInfo>
+					<VersionInfoKeys>
+						<VersionInfoKeys Name="CompanyName"/>
+						<VersionInfoKeys Name="FileDescription"/>
+						<VersionInfoKeys Name="FileVersion">1.0.0.0</VersionInfoKeys>
+						<VersionInfoKeys Name="InternalName"/>
+						<VersionInfoKeys Name="LegalCopyright"/>
+						<VersionInfoKeys Name="LegalTrademarks"/>
+						<VersionInfoKeys Name="OriginalFilename"/>
+						<VersionInfoKeys Name="ProductName"/>
+						<VersionInfoKeys Name="ProductVersion">1.0.0.0</VersionInfoKeys>
+						<VersionInfoKeys Name="Comments"/>
+					</VersionInfoKeys>
+					<Excluded_Packages>
+						<Excluded_Packages Name="$(BDSBIN)\bcboffice2k160.bpl">Embarcadero C++Builder Office 2000 Servers Package</Excluded_Packages>
+						<Excluded_Packages Name="$(BDSBIN)\bcbofficexp160.bpl">Embarcadero C++Builder Office XP Servers Package</Excluded_Packages>
+						<Excluded_Packages Name="$(BDSBIN)\dcloffice2k160.bpl">Microsoft Office 2000 Sample Automation Server Wrapper Components</Excluded_Packages>
+					</Excluded_Packages>
+					<Source>
+						<Source Name="MainSource">Genesis.dpr</Source>
+					</Source>
+				</Delphi.Personality>
+				<Deployment>
+					<DeployFile Class="DebugSymbols" Configuration="Debug" LocalName="..\..\bin\Debug\Genesis.rsm">
+						<Platform Name="Win32">
+							<RemoteName>Genesis.rsm</RemoteName>
+						</Platform>
+					</DeployFile>
+					<DeployFile Class="ProjectOutput" Configuration="Debug" LocalName="..\..\bin\Debug\Genesis.exe">
+						<Platform Name="Win32"/>
+					</DeployFile>
+					<DeployClass Name="ProjectOutput" Required="true">
+						<Platform Name="OSX32">
+							<RemoteDir>Contents\MacOS</RemoteDir>
+							<Operation>1</Operation>
+						</Platform>
+						<Platform Name="Win32">
+							<Operation>0</Operation>
+						</Platform>
+					</DeployClass>
+					<DeployClass Name="DependencyPackage" Required="true">
+						<Platform Name="OSX32">
+							<RemoteDir>Contents\MacOS</RemoteDir>
+							<Operation>1</Operation>
+							<Extensions>.dylib</Extensions>
+						</Platform>
+						<Platform Name="Win32">
+							<Operation>0</Operation>
+							<Extensions>.bpl</Extensions>
+						</Platform>
+					</DeployClass>
+					<DeployClass Name="DependencyModule">
+						<Platform Name="OSX32">
+							<RemoteDir>Contents\MacOS</RemoteDir>
+							<Operation>1</Operation>
+							<Extensions>.dylib</Extensions>
+						</Platform>
+						<Platform Name="Win32">
+							<Operation>0</Operation>
+							<Extensions>.dll;.bpl</Extensions>
+						</Platform>
+					</DeployClass>
+					<DeployClass Name="ProjectOSXInfoPList">
+						<Platform Name="OSX32">
+							<RemoteDir>Contents</RemoteDir>
+							<Operation>1</Operation>
+						</Platform>
+					</DeployClass>
+					<DeployClass Name="File">
+						<Platform Name="OSX32">
+							<RemoteDir>Contents\MacOS</RemoteDir>
+							<Operation>0</Operation>
+						</Platform>
+						<Platform Name="Win32">
+							<Operation>0</Operation>
+						</Platform>
+					</DeployClass>
+					<DeployClass Name="DebugSymbols">
+						<Platform Name="OSX32">
+							<RemoteDir>Contents\MacOS</RemoteDir>
+							<Operation>1</Operation>
+						</Platform>
+						<Platform Name="Win32">
+							<Operation>0</Operation>
+						</Platform>
+					</DeployClass>
+					<DeployClass Name="DependencyFramework">
+						<Platform Name="OSX32">
+							<RemoteDir>Contents\MacOS</RemoteDir>
+							<Operation>1</Operation>
+							<Extensions>.framework</Extensions>
+						</Platform>
+						<Platform Name="Win32">
+							<Operation>0</Operation>
+						</Platform>
+					</DeployClass>
+					<DeployClass Name="AdditionalDebugSymbols">
+						<Platform Name="OSX32">
+							<RemoteDir>Contents\MacOS</RemoteDir>
+							<Operation>1</Operation>
+						</Platform>
+						<Platform Name="Win32">
+							<Operation>0</Operation>
+						</Platform>
+					</DeployClass>
+					<DeployClass Name="ProjectOSXResource">
+						<Platform Name="OSX32">
+							<RemoteDir>Contents\Resources</RemoteDir>
+							<Operation>1</Operation>
+						</Platform>
+					</DeployClass>
+					<ProjectRoot Name="$(PROJECTNAME).app" Platform="OSX32"/>
+					<ProjectRoot Name="$(PROJECTNAME)" Platform="Win64"/>
+					<ProjectRoot Name="$(PROJECTNAME)" Platform="Win32"/>
+				</Deployment>
+				<Platforms>
+					<Platform value="Win64">False</Platform>
+					<Platform value="Win32">True</Platform>
+				</Platforms>
+				<ModelSupport>False</ModelSupport>
+			</BorlandProject>
+			<ProjectFileVersion>12</ProjectFileVersion>
+		</ProjectExtensions>
+		<Import Condition="Exists('$(BDS)\Bin\CodeGear.Delphi.Targets')" Project="$(BDS)\Bin\CodeGear.Delphi.Targets"/>
+		<Import Condition="Exists('$(APPDATA)\Embarcadero\$(BDSAPPDATABASEDIR)\$(PRODUCTVERSION)\UserTools.proj')" Project="$(APPDATA)\Embarcadero\$(BDSAPPDATABASEDIR)\$(PRODUCTVERSION)\UserTools.proj"/>
+		<Import Condition="Exists('$(MSBuildProjectName).deployproj')" Project="$(MSBuildProjectName).deployproj"/>
+	</Project>

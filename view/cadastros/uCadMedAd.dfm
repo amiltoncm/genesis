@@ -1,0 +1,238 @@
+inherited frmCadMedAd: TfrmCadMedAd
+  Caption = 'Cadastra m'#233'dico adicional'
+  ClientHeight = 145
+  ClientWidth = 476
+  ExplicitWidth = 482
+  ExplicitHeight = 170
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Label1: TLabel [0]
+    Left = 8
+    Top = 8
+    Width = 90
+    Height = 13
+    CustomHint = BalloonHint1
+    Caption = 'Selecione o m'#233'dico'
+  end
+  object spGrava: TSpeedButton [1]
+    Left = 440
+    Top = 24
+    Width = 23
+    Height = 22
+    CustomHint = BalloonHint1
+    Action = actGravar
+    Flat = True
+    Glyph.Data = {
+      36030000424D3603000000000000360000002800000010000000100000000100
+      18000000000000030000120B0000120B00000000000000000000FF00FFFF00FF
+      FF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00
+      FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FF08
+      780E08780EFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FF
+      FF00FFFF00FFFF00FFFF00FF08780E76F9A70DA31B08780EFF00FFFF00FFFF00
+      FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FF08780E76
+      F9A70EAA1D08780EFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FF
+      FF00FFFF00FFFF00FFFF00FF08780E76F9A70EA81C08780EFF00FFFF00FFFF00
+      FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FF08780E76
+      F9A710AA1F08780EFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FF
+      08780E08780E08780E08780E08780E76F9A719B02C08780E08780E08780E0878
+      0E08780EFF00FFFF00FFFF00FF08780E76F9A755E38349DA7242D36837C8562A
+      B94322B3371CB23016AF270FA81D0EA91B0DA21B08780EFF00FFFF00FF08780E
+      76F9A776F9A776F9A776F9A776F9A776F9A72CBB4876F9A776F9A776F9A776F9
+      A776F9A708780EFF00FFFF00FFFF00FF08780E08780E08780E08780E08780E76
+      F9A73CCB5D08780E08780E08780E08780E08780EFF00FFFF00FFFF00FFFF00FF
+      FF00FFFF00FFFF00FFFF00FF08780E76F9A749D97208780EFF00FFFF00FFFF00
+      FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FF08780E76
+      F9A755E28208780EFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FF
+      FF00FFFF00FFFF00FFFF00FF08780E76F9A763F09708780EFF00FFFF00FFFF00
+      FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FF08780E76
+      F9A776F9A708780EFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FF
+      FF00FFFF00FFFF00FFFF00FFFF00FF08780E08780EFF00FFFF00FFFF00FFFF00
+      FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF
+      00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FF}
+    ParentShowHint = False
+    ShowHint = True
+  end
+  object Label2: TLabel [2]
+    Left = 8
+    Top = 56
+    Width = 33
+    Height = 13
+    CustomHint = BalloonHint1
+    Caption = 'M'#233'dico'
+  end
+  object spDeletar: TSpeedButton [3]
+    Left = 440
+    Top = 72
+    Width = 23
+    Height = 22
+    CustomHint = BalloonHint1
+    Action = actDeletar
+    Flat = True
+    Glyph.Data = {
+      36030000424D3603000000000000360000002800000010000000100000000100
+      18000000000000030000120B0000120B00000000000000000000FF00FFFF00FF
+      FF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00
+      FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF
+      00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FF
+      FF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00
+      FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF
+      00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FF
+      FF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00
+      FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF
+      00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FF
+      FF00FF0104A20104A20104A20104A20104A20104A20104A20104A20104A20104
+      A2FF00FFFF00FFFF00FFFF00FFFF00FF0104A25983FF0026FF0030FF0030FB00
+      2FF2002FE9002EE10030D80031D00034CB0104A2FF00FFFF00FFFF00FFFF00FF
+      0104A2ABC2FF6480FF6688FF6688FF6687FA6787F56787F05779E94D70E44D74
+      E20104A2FF00FFFF00FFFF00FFFF00FFFF00FF0104A20104A20104A20104A201
+      04A20104A20104A20104A20104A20104A2FF00FFFF00FFFF00FFFF00FFFF00FF
+      FF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00
+      FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF
+      00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FF
+      FF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00
+      FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF
+      00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FF
+      FF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00
+      FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF
+      00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FF}
+    ParentShowHint = False
+    ShowHint = True
+  end
+  object Label3: TLabel [4]
+    Left = 8
+    Top = 96
+    Width = 105
+    Height = 13
+    CustomHint = BalloonHint1
+    Caption = 'Conselho/Registro/UF'
+  end
+  inherited btFechar: TBitBtn
+    Left = 363
+    Top = 112
+    ExplicitLeft = 363
+    ExplicitTop = 112
+  end
+  object cbMedico: TwwDBLookupCombo [6]
+    Left = 8
+    Top = 24
+    Width = 425
+    Height = 21
+    Hint = 'M'#233'dico solicitante'
+    CustomHint = BalloonHint1
+    CharCase = ecUpperCase
+    DropDownAlignment = taLeftJustify
+    Selected.Strings = (
+      'med_nome'#9'50'#9'M'#233'dico'#9'F'
+      'med_numconselho'#9'10'#9'Registro'#9'F'
+      'med_codigo'#9'8'#9'C'#243'digo'#9'F'
+      'med_fone'#9'15'#9'Telefone'#9'F')
+    LookupField = 'med_nome'
+    Options = [loColLines, loRowLines, loTitles]
+    ButtonEffects.Transparent = True
+    ButtonEffects.Flat = True
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 1
+    AutoDropDown = True
+    ShowButton = True
+    PreciseEditRegion = False
+    AllowClearKey = False
+    ShowMatchText = True
+    OnKeyPress = cbMedicoKeyPress
+  end
+  object dbTitulo: TDBEdit [7]
+    Left = 8
+    Top = 72
+    Width = 33
+    Height = 21
+    Hint = 'T'#237'tulo'
+    CustomHint = BalloonHint1
+    TabStop = False
+    DataField = 'med_titulo'
+    DataSource = dsMedAd
+    ParentShowHint = False
+    ReadOnly = True
+    ShowHint = True
+    TabOrder = 2
+  end
+  object dbNome: TDBEdit [8]
+    Left = 48
+    Top = 72
+    Width = 385
+    Height = 21
+    CustomHint = BalloonHint1
+    TabStop = False
+    CharCase = ecUpperCase
+    DataField = 'med_nome'
+    DataSource = dsMedAd
+    ParentShowHint = False
+    ReadOnly = True
+    ShowHint = True
+    TabOrder = 3
+  end
+  object dbConselho: TDBEdit [9]
+    Left = 8
+    Top = 112
+    Width = 49
+    Height = 21
+    CustomHint = BalloonHint1
+    TabStop = False
+    DataField = 'cos_tipo'
+    DataSource = dsMedAd
+    ParentShowHint = False
+    ReadOnly = True
+    ShowHint = True
+    TabOrder = 4
+  end
+  object dbNumConselho: TDBEdit [10]
+    Left = 64
+    Top = 112
+    Width = 65
+    Height = 21
+    CustomHint = BalloonHint1
+    TabStop = False
+    DataField = 'med_numconselho'
+    DataSource = dsMedAd
+    ParentShowHint = False
+    ReadOnly = True
+    ShowHint = True
+    TabOrder = 5
+  end
+  object dbUF: TDBEdit [11]
+    Left = 136
+    Top = 112
+    Width = 25
+    Height = 21
+    CustomHint = BalloonHint1
+    TabStop = False
+    DataField = 'cos_uf'
+    DataSource = dsMedAd
+    ParentShowHint = False
+    ReadOnly = True
+    ShowHint = True
+    TabOrder = 6
+  end
+  inherited BalloonHint1: TBalloonHint
+    Left = 40
+    Top = 24
+  end
+  object dsMedAd: TDataSource
+    DataSet = dmExames.qyExamesRespAd
+    Left = 112
+  end
+  object ActionList1: TActionList
+    Images = frmPrincipal.Imagens
+    Left = 272
+    Top = 8
+    object actGravar: TAction
+      Hint = 'Insere m'#233'dico adicional'
+      ImageIndex = 110
+      OnExecute = actGravarExecute
+    end
+    object actDeletar: TAction
+      Hint = 'Apaga m'#233'dico adicional'
+      ImageIndex = 95
+      OnExecute = actDeletarExecute
+    end
+  end
+end

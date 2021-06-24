@@ -1,0 +1,213 @@
+inherited frmRespAdd: TfrmRespAdd
+  Caption = 'Respons'#225'vel adicional'
+  ClientHeight = 175
+  ClientWidth = 447
+  ExplicitWidth = 453
+  ExplicitHeight = 200
+  PixelsPerInch = 96
+  TextHeight = 13
+  object SpeedButton2: TSpeedButton [0]
+    Left = 416
+    Top = 72
+    Width = 23
+    Height = 22
+    Hint = 'Exclui o respons'#225'vel adicional'
+    CustomHint = BalloonHint1
+    Flat = True
+    Glyph.Data = {
+      36030000424D3603000000000000360000002800000010000000100000000100
+      18000000000000030000120B0000120B00000000000000000000AB4B14AE4B13
+      AE4B13B04B14B04B14B04B14B04A12B04912AF4C14AD4C15FF00FFFF00FFFF00
+      FFFF00FFFF00FFFF00FFAA4B15AC4A10D05524F1614AF86B53F97A5BF98067F9
+      705DF26149C3542CAA4A13FF00FFFF00FFFF00FFFF00FFFF00FFA94B14AF4A13
+      DA572DF67257FC8C69FB7F5BFCBFB0FBC7C1F36047CD5737AA4C18FF00FFFF00
+      FFFF00FFFF00FFFF00FFFF00FFB24B18E4623CFE8E6DFF8A63FF9072FFEEEBFF
+      EEEBF77E62C2532EA84B18FF00FFFF00FFFF00FFFF00FFFF00FFFF00FFAF4D1B
+      D86740FD8A5DF58059DEB5AAE8F6F5FED8CAFF906DCF663EA84914FF00FFFF00
+      FFFF00FFFF00FFFF00FFFF00FFFF00FFE66D3993484049396E294187374B8A6E
+      556DD96C42CF632DFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FF
+      FF00FF1C33950138AD0A38A305309E00258D2B2F7EFF00FFFF00FFFF00FFFF00
+      FFFF00FFFF00FFFF00FFFF00FFFF00FF0016411658CA1C55BC1B56BC1C54BB19
+      54BC0338ACFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FF000000
+      143E802677F32069D81E64CF1F62CD2168D21E5EC5FF00FFFF00FFFF00FFFF00
+      FFFF00FFFF00FFFF00FFFF00FF000000123E752676D92165BD1F63CA1D5CC324
+      72DB256FDBFF00FF0017DD0017DDFF00FF0017DD0017DDFF00FFFF00FF050505
+      0D11130208121645723295F22E8AF13193F8277AEDFF00FF0017DD0017DD0017
+      DD0017DD0017DDFF00FFFF00FF3B38363B383638332C123454288CD536A2F333
+      9DEE1C50B7FF00FFFF00FF0017DD0017DD0017DDFF00FFFF00FFFF00FFFF00FF
+      3E3C3A7574746C69673C414B162A3F112136FF00FFFF00FF0017DD0017DD0017
+      DD0017DD0017DDFF00FFFF00FFFF00FFFF00FF91908E91908E857F7A342E29FF
+      00FFFF00FFFF00FF0017DD0017DDFF00FF0017DD0017DDFF00FFFF00FFFF00FF
+      FF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00
+      FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF
+      00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FF}
+    ParentShowHint = False
+    ShowHint = True
+    OnClick = SpeedButton2Click
+  end
+  inherited btFechar: TBitBtn
+    Left = 334
+    Top = 142
+    ExplicitLeft = 334
+    ExplicitTop = 142
+  end
+  object Panel1: TPanel [2]
+    Left = 0
+    Top = 0
+    Width = 447
+    Height = 65
+    CustomHint = BalloonHint1
+    Align = alTop
+    BevelInner = bvLowered
+    TabOrder = 1
+    object Label1: TLabel
+      Left = 8
+      Top = 8
+      Width = 36
+      Height = 13
+      CustomHint = BalloonHint1
+      Caption = 'Exame:'
+    end
+    object Label2: TLabel
+      Left = 112
+      Top = 8
+      Width = 105
+      Height = 13
+      CustomHint = BalloonHint1
+      Caption = 'Respons'#225'vel adicional'
+    end
+    object SpeedButton1: TSpeedButton
+      Left = 416
+      Top = 24
+      Width = 23
+      Height = 22
+      Hint = 'Adiciona respons'#225'vel adicional'
+      CustomHint = BalloonHint1
+      Flat = True
+      Glyph.Data = {
+        36030000424D3603000000000000360000002800000010000000100000000100
+        18000000000000030000120B0000120B00000000000000000000FF00FFFF00FF
+        FF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00
+        FFFF00FFFF00FFFF00FFAB4B14AE4B13AE4B13B04B14B04B14B04B14B04A12B0
+        4912AF4C14AD4C15FF00FFFF00FFFF00FFFF00FFFF00FFFF00FFAA4B15AC4A10
+        D05524F1614AF86B53F97A5BF98067F9705DF26149C3542CAA4A13FF00FFFF00
+        FFFF00FFFF00FFFF00FFA94B14AF4A13DA572DF67257FC8C69FB7F5BFCBFB0FB
+        C7C1F36047CD5737AA4C18FF00FFFF00FFFF00FFFF00FFFF00FFFF00FFB24B18
+        E4623CFE8E6DFF8A63FF9072FFEEEBFFEEEBF77E62C2532EA84B18FF00FFFF00
+        FFFF00FFFF00FFFF00FFFF00FFAF4D1BD86740FD8A5DF58059DEB5AAE8F6F5FE
+        D8CAFF906DCF663EA84914FF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FF
+        E66D3993484049396E294187374B8A6E556DD96C42CF632DFF00FFFF00FFFF00
+        FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FF1C33950138AD0A38A305309E00
+        258D2B2F7EFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FF
+        0016411658CA1C55BC1B56BC1C54BB1954BC0338ACFF00FFFF00FFFF00FFFF00
+        FFFF00FFFF00FFFF00FFFF00FF000000143E802677F32069D81E64CF1F62CD21
+        68D21E5EC5FF00FFFF00FFFF00FF317F13317F13FF00FFFF00FFFF00FF000000
+        123E752676D92165BD1F63CA1D5CC32472DB256FDBFF00FFFF00FFFF00FF317F
+        13317F13FF00FFFF00FFFF00FF0505050D11130208121645723295F22E8AF131
+        93F8277AEDFF00FF317F13317F132B99322B9630317F13317F13FF00FF3B3836
+        3B383638332C123454288CD536A2F3339DEE1C50B7FF00FF317F13317F132C90
+        2B2C902B317F13317F13FF00FFFF00FF3E3C3A7574746C69673C414B162A3F11
+        2136FF00FFFF00FFFF00FFFF00FF317F13317F13FF00FFFF00FFFF00FFFF00FF
+        FF00FF91908E91908E857F7A342E29FF00FFFF00FFFF00FFFF00FFFF00FF317F
+        13317F13FF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF
+        00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FF}
+      ParentShowHint = False
+      ShowHint = True
+      OnClick = SpeedButton1Click
+    end
+    object edExame: TEdit
+      Left = 8
+      Top = 24
+      Width = 97
+      Height = 21
+      Hint = 'N'#250'mero do exame'
+      CustomHint = BalloonHint1
+      TabStop = False
+      Color = clBtnFace
+      ParentShowHint = False
+      ReadOnly = True
+      ShowHint = True
+      TabOrder = 0
+      Text = 'edExame'
+    end
+    object cbResponsavel: TwwDBLookupCombo
+      Left = 113
+      Top = 24
+      Width = 296
+      Height = 21
+      Hint = 'Respons'#225'vel pela emiss'#227'o do Laudo'
+      CustomHint = BalloonHint1
+      DropDownAlignment = taLeftJustify
+      Selected.Strings = (
+        'res_nome'#9'80'#9'res_nome'#9'F'#9
+        'res_codigo'#9'10'#9'res_codigo'#9'F'#9
+        'res_titulo'#9'5'#9'res_titulo'#9'F'#9
+        'cos_id'#9'10'#9'cos_id'#9'F'#9
+        'res_numconselho'#9'10'#9'res_numconselho'#9'F'#9)
+      LookupTable = dmLookups.lkProcResponsaveis
+      LookupField = 'res_nome'
+      Options = [loColLines, loRowLines, loTitles]
+      ButtonEffects.Transparent = True
+      ButtonEffects.Flat = True
+      ParentShowHint = False
+      ShowHint = True
+      TabOrder = 1
+      AutoDropDown = True
+      ShowButton = True
+      PreciseEditRegion = False
+      AllowClearKey = False
+      ShowMatchText = True
+    end
+  end
+  object wwDataInspector1: TwwDataInspector [3]
+    Left = 0
+    Top = 64
+    Width = 409
+    Height = 68
+    CustomHint = BalloonHint1
+    DisableThemes = False
+    TabOrder = 2
+    DataSource = dsExamesResp
+    Items = <
+      item
+        DataSource = dsExamesResp
+        DataField = 'exa_id'
+        Caption = 'ID Exame'
+        WordWrap = False
+      end
+      item
+        DataSource = dsExamesResp
+        DataField = 'res_codigo'
+        Caption = 'C'#243'd. Resp.'
+        WordWrap = False
+      end
+      item
+        DataSource = dsExamesResp
+        DataField = 'res_nome'
+        Caption = 'Nome'
+        WordWrap = False
+      end
+      item
+        DataSource = dsExamesResp
+        DataField = 'res_iniciais'
+        Caption = 'Iniciais'
+        WordWrap = False
+      end>
+    CaptionWidth = 100
+    Options = [ovColumnResize, ovRowResize, ovEnterToTab, ovHighlightActiveRow, ovCenterCaptionVert]
+    CaptionFont.Charset = DEFAULT_CHARSET
+    CaptionFont.Color = clWindowText
+    CaptionFont.Height = -11
+    CaptionFont.Name = 'MS Sans Serif'
+    CaptionFont.Style = []
+  end
+  inherited BalloonHint1: TBalloonHint
+    Left = 264
+    Top = 8
+  end
+  object dsExamesResp: TDataSource
+    DataSet = dmExames.qyExamesResp
+    Left = 64
+    Top = 80
+  end
+end
